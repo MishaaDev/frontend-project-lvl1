@@ -25,3 +25,4 @@ const startGame = (message, gameQAndA) => {
 };
 
 export default startGame;
+export { greetTheUser };
