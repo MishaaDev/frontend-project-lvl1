@@ -9,17 +9,15 @@ const greetTheUser = () => {
 
 const startGame = (gameQAndA) => {
   const name = greetTheUser();
-  let trueAnswerCounter = 0;
-  while (trueAnswerCounter < 3) {
+  for (let i = 0; i < 3; i += 1) {
     const [question, trueAnswer] = gameQAndA();
     console.log(`Question: ${question}`);
     const userAnswer = getAnswer();
     if (userAnswer === trueAnswer) {
       console.log('Correct!');
-      trueAnswerCounter += 1;
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${trueAnswer}"\nLet's try again, ${name}!`);
-      trueAnswerCounter = 0;
+      return;
     }
   }
   console.log(`Congratulations, ${name}!`);
