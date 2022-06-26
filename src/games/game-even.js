@@ -1,4 +1,4 @@
-import { greetTheUser, startGame } from '../core.js';
+import startGame from '../core.js';
 import getRandomNumber from '../get-random.js';
 
 const gameQAndA = () => {
@@ -10,6 +10,6 @@ const gameQAndA = () => {
 const game = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
   startGame(gameQAndA);
-}
+};
 
 export default game;

@@ -1,4 +1,4 @@
-import getAnswer from "./cli.js";
+import getAnswer from './cli.js';
 
 const greetTheUser = () => {
   console.log('Welcome to the Brain Games!\nMay I have your name?');
@@ -8,17 +8,12 @@ const greetTheUser = () => {
 };
 
 const startGame = (gameQAndA) => {
-
   const name = greetTheUser();
   let trueAnswerCounter = 0;
-  
   while (trueAnswerCounter < 3) {
-    
     const [question, trueAnswer] = gameQAndA();
-    const userAnswer = getAnswer();
-    
     console.log(`Question: ${question}`);
-    
+    const userAnswer = getAnswer();
     if (userAnswer === trueAnswer) {
       console.log('Correct!');
       trueAnswerCounter += 1;
@@ -30,4 +25,4 @@ const startGame = (gameQAndA) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export { greetTheUser, startGame };
+export default startGame;
