@@ -1,6 +1,8 @@
 import startGame from '../core.js';
 import getRandomNumber from '../get-random.js';
 
+const message = 'What is the result of the expression?';
+
 const chooseOperator = () => {
   const operators = ['-', '+', '*'];
   const i = getRandomNumber(0, operators.length - 1);
@@ -29,9 +31,6 @@ const gameQAndA = () => {
   return [question, trueAnswer];
 };
 
-const game = () => {
-  console.log('What is the result of the expression?');
-  startGame(gameQAndA);
-};
+const game = () => startGame(message, gameQAndA);
 
 export default game;

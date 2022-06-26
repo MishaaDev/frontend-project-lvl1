@@ -7,8 +7,9 @@ const greetTheUser = () => {
   return name;
 };
 
-const startGame = (gameQAndA) => {
+const startGame = (message, gameQAndA) => {
   const name = greetTheUser();
+  console.log(message);
   for (let i = 0; i < 3; i += 1) {
     const [question, trueAnswer] = gameQAndA();
     console.log(`Question: ${question}`);
