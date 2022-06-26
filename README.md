@@ -1,7 +1,7 @@
 ## Brain Games
 These are 5 logical thinking games. Each game asks the player a question that needs to be answered correctly. If player answers correctly 3 times in a row, the game is considered completed. If the player makes a mistake - game over.
 
-***Install games***
+### ***Install games***
 To install and run th games, you will need `nodejs` and `npm`. If you have it, run the following commands:
 ```
 git clone https://github.com/Suvorov-m/frontend-project-lvl1.git
